@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Portfolio</title>
+  <link rel="stylesheet" href="portfolio.css" />
+</head>
+<body>
+  <header>
+    <h1>David García</h1>
+    <p>Desarrollador de Aplicaciones Multiplataforma</p>
+    <a href="CV.pdf" target="_blank" class="cv-btn">Ver CV</a>
+  </header>
+
+  <div id="particles-container">
+    <div id="particles-js"></div>
+
+  <section id="proyectos">
+
+    <h2>Sobre mí</h2>
+    <p>Soy estudiante de Desarrollo de Aplicaciones Multiplataforma, motivado y con gran interés por iniciar mi carrera profesional en el sector del desarrollo de software. A lo largo de mi formación académica, he adquirido sólidos conocimientos en el desarrollo de aplicaciones Android (Java/Kotlin) y aplicaciones de escritorio, lo que me ha permitido desarrollar proyectos funcionales y comprender el ciclo completo de desarrollo.</p>
+
+    <h2>Proyectos</h2>
+    <div class="grid">
+      <div class="proyecto">
+        <h3>Calculadora Android</h3>
+        <p>App desarrollada en Kotlin con historial y base de datos local.</p>
+        <a href="https://github.com/tuusuario/calculadora" target="_blank">Ver en GitHub</a>
+      </div>
+
+      <div class="proyecto">
+        <h3>Juego Slick2D</h3>
+        <p>Juego en Java donde robots colisionan con animaciones y sonido.</p>
+        <a href="https://github.com/tuusuario/juego-robots" target="_blank">Ver en GitHub</a>
+      </div>
+
+      <div class="proyecto">
+        <h3>Módulo Odoo Agenda</h3>
+        <p>Módulo personalizado para gestionar contactos telefónicos en Odoo 17.</p>
+        <a href="https://github.com/tuusuario/odoo-agenda" target="_blank">Ver en GitHub</a>
+      </div>
+      <!-- Añade más proyectos aquí -->
+    </div>
+  </section>
+
+  <footer>
+    <p>E-mail de contacto: <a href="mailto:dagarper_11@hotmail.com">dagarper_11@hotmail.com</a></p>
+    <p>&copy; 2025 David García | Portfolio personal</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  <script src="portfolio.js"></script>
+  
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+<script>
+  particlesJS.load('particles-js', 'particles.json', function () {
+    console.log('particles.js cargado');
+  });
+</script>
+</body>
+</html>
