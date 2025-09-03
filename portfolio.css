@@ -108,7 +108,7 @@ section#proyectos {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(7,1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
   margin-top: 1rem;
 }
@@ -153,8 +153,9 @@ section#proyectos {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(7,1fr);
   gap: 1.5rem;
+  justify-items: center;
 }
 
 .skill {
@@ -190,3 +191,4 @@ footer {
   color: white;
   margin-top: 2rem;
 }
+
