@@ -12,12 +12,61 @@ body {
 }
 
 header {
-  background-image: url(imagenes/fondo\ binario.avif);
-  background-size: cover;
-  background-position: center;
+  position: relative;
+  background: linear-gradient(135deg, #0d1b2a, #1b263b, #415a77);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
   color: white;
-  padding: 2rem;
+  padding: 4rem 2rem;
   text-align: center;
+  overflow: hidden;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* Overlay para legibilidad */
+  z-index: 0;
+}
+
+header h1, 
+header p, 
+header .cv-btn {
+  position: relative;
+  z-index: 1;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  animation: fadeInDown 1s ease;
+}
+
+header p {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  animation: fadeInUp 1.5s ease;
+}
+
+/* Animación degradado */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Animaciones de entrada */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .cv-btn {
@@ -89,6 +138,51 @@ section#proyectos {
   font-weight: bold;
 }
 
+#habilidades {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+#habilidades h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #98b3ea;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill {
+  background: #1b263b;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.skill:hover {
+  transform: translateY(-5px);
+  background: #2c3e50;
+}
+
+.skill img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 0.5rem;
+}
+
+.skill span {
+  display: block;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
 footer {
   text-align: center;
   padding: 1rem;
@@ -96,5 +190,3 @@ footer {
   color: white;
   margin-top: 2rem;
 }
-
-
